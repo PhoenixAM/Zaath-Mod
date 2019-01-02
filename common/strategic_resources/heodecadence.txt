@@ -1,0 +1,21 @@
+Zdecadence = {
+	tradable = no
+	tooltip_decimals = 1
+	max = 100
+	
+	visibility_prerequisite = { always = yes }
+}
+
+zzzZaath_Resources = {
+	tradable = no
+	max = 1
+	
+	visibility_prerequisite = { always = yes }
+}
+
+ZPsionicPower = {
+	tradable = no
+	max = 1000
+	
+	visibility_prerequisite = { always = yes }
+}

@@ -1,0 +1,22 @@
+on_custom_diplomacy = {
+	events = {
+	
+	
+	}
+}
+
+#From = Planet scope
+#This = Fleet scope
+on_fleet_enter_orbit = {
+	events = {
+		zaathcomms.1
+	}
+}
+
+on_ship_destroyed_victim = {
+
+}
+
+on_fleet_destroyed_victim = {
+
+}

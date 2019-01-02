@@ -1,0 +1,85 @@
+auth_ancient = {
+	has_heir = no
+	election_type = none
+	has_factions = no
+	can_reform = no
+	localization_postfix = machine_intelligence
+	icon = "gfx/interface/icons/governments/authorities/auth_hive_mind.dds"
+	
+	valid_for_released_vassal = no
+	potential = {
+		country_type = { value = TheAncients }
+	}
+	possible = {
+		ethics = {
+			value = civic_ancient
+			value = civic_GM
+		}
+	}
+	random_weight = {
+		base = 0 # Should be fairly rare
+	}
+	
+	traits = {
+		trait = trait_zaath
+		trait = trait_psionic
+	}
+	
+	country_modifier = {
+		ship_hull_mult = 0.5
+		ascension_perks_add = -1
+		pop_resource_output = -0.66
+		all_technology_research_speed = -0.75
+		country_resource_unity_mult = 1
+	}
+	
+	tags = {
+		AUTH_MACHINE_INTELLIGENCE_IMMORTAL_LEADERS
+		AUTH_MACHINE_NATIVE_POPS
+		AUTH_MACHINE_FOREIGN_POP_SURVIVAL
+		AUTH_MACHINE_TECH_ADDITIONS
+		AUTH_MACHINE_TECH_RESTRICTIONS
+		AUTH_MACHINE_ASCENSION_RESTRICTIONS
+	}
+}
+
+auth_reformedancient = {
+	has_heir = no
+	election_type = none
+	has_factions = no
+	can_reform = no
+	localization_postfix = machine_intelligence
+	icon = "gfx/interface/icons/governments/authorities/auth_hive_mind.dds"
+	
+	valid_for_released_vassal = no
+	potential = {
+		country_type = { value = TheAncientsReformed }
+	}
+	possible = {
+		ethics = {
+			value = civic_ancient
+			value = civic_GM
+		}
+	}
+	
+	traits = {
+		trait = trait_Rzaath
+		trait = trait_psionic
+	}
+	
+	country_modifier = {
+		pop_resource_output = 0.25
+		ship_hull_mult = 1
+		pop_slave_resource_output = 1
+		ship_starting_experience_add = 1000
+	}
+	
+	tags = {
+		AUTH_MACHINE_INTELLIGENCE_IMMORTAL_LEADERS
+		AUTH_MACHINE_NATIVE_POPS
+		AUTH_MACHINE_FOREIGN_POP_SURVIVAL
+		AUTH_MACHINE_TECH_ADDITIONS
+		AUTH_MACHINE_TECH_RESTRICTIONS
+		AUTH_MACHINE_ASCENSION_RESTRICTIONS
+	}
+}

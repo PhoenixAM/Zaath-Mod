@@ -1,0 +1,33 @@
+wg_warmongerattack = {
+	casus_belli = cb_warmonger
+	
+	hide_if_no_cb = yes
+	release_occupied_systems_on_status_quo = yes
+	set_defender_wargoal = wg_warmongerdefense
+
+	potential = {
+		is_country_type = default
+	}
+	possible = {
+		always = yes
+	}
+	
+	
+}
+
+wg_warmongerdefense = {
+	
+	hide_if_no_cb = yes
+	potential = {
+		is_country_type = default
+	}
+	possible = {
+		always = yes
+	}
+		from = {
+			set_subject_of = {
+				who = root
+				subject_type = vassal
+			}		
+		}	
+	}

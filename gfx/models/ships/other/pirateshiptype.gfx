@@ -1,0 +1,21 @@
+objectTypes = {	
+	pdxmesh = {
+		name = "cargo_transport_pirate_mesh"
+		file = "gfx/models/ships/other/cargo_transport_pirate.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle"			type = "molluscoid_01_corvette_frame_idle_animation" }
+		animation = { id = "death3"			type = "molluscoid_01_corvette_frame_death3_animation" }
+	}
+	
+	pdxmesh = {
+
+		name = "sensor_station_pirate_mesh"
+		file = "gfx/models/ships/other/sensor_station_pirate.mesh"
+		animation = { id = "idle"			type = "sensor_station_idle_animation" }
+		animation = { id = "death"			type = "sensor_station_death_animation" }
+		scale = 1.0
+	}
+}
+
+

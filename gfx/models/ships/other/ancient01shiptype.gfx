@@ -1,0 +1,27 @@
+objectTypes = {	
+	pdxmesh = {
+		name = "eventship_02_ancient_mesh"
+		file = "gfx/models/ships/other/event_ship_02_ancient.mesh"	
+		animation = { id = "idle"			type = "event_ship_02_idle_animation" }
+		animation = { id = "death"			type = "event_ship_02_death_animation" }
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "eventship_05_ancient_mesh"
+		file = "gfx/models/ships/other/event_ship_05_ancient.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle"			type = "molluscoid_01_corvette_frame_idle_animation" }
+		animation = { id = "death"			type = "molluscoid_01_corvette_frame_death_animation" }
+		animation = { id = "death2"			type = "molluscoid_01_corvette_frame_death2_animation" }
+		animation = { id = "death3"			type = "molluscoid_01_corvette_frame_death3_animation" }
+		
+		meshsettings = {
+		shader = "PdxMeshShip"
+		texture_diffuse = "fventship_05_diffuse.dds"
+		}
+	}
+}
+
+

@@ -1,0 +1,103 @@
+# Generated species derive their names from here
+
+### AI
+
+VOI = {
+	elthorgaks = {
+		name = Elthorgak
+		plural = Elthorgaks
+		home_planet = "KETHKIL"
+		home_system = "ZILK"
+		name_list = "VOI1"
+	}
+	
+	xorioks = {
+		name = Xoriok
+		plural = Xorioks
+		home_planet = "MELGAZ"
+		home_system = "LIXIK"
+		name_list = "VOI1"
+	}
+	
+	keleks = {
+		name = Kelek
+		plural = Keleks
+		home_planet = "ALKIZ"
+		home_system = "XAX"
+		name_list = "VOI1"
+	}
+	
+	xolgors = {
+		name = Xolgor
+		plural = Xolgor
+		home_planet = "OLGIX"
+		home_system = "MALKIGOX"
+		name_list = "VOI1"
+	}
+	
+	kaziks = {
+		name = Kazik
+		plural = Kaziks
+		home_planet = "ZALGOR"
+		home_system = "XEYK"
+		name_list = "VOI1"
+	}
+}
+
+EXT = {
+	theascended = {
+		name = "Ascended"
+		plural = "Ascended"
+		home_planet = "Agility"
+		home_system = "Agility"
+		name_list = "EXT1"
+	}
+	
+	thenlightened = {
+		name = Enlightened
+		plural = Enlightened
+		home_planet = "Fidelity"
+		home_system = "Fidelity"
+		name_list = "EXT1"
+	}
+	
+	theedified = {
+		name = Edified
+		plural = Edified
+		home_planet = "Fortitude"
+		home_system = "Fortitude"
+		name_list = "EXT1"
+	}
+	
+	theglorified = {
+		name = Glorified
+		plural = Glorified
+		home_planet = "Compassion"
+		home_system = "Compassion"
+		name_list = "EXT1"
+	}
+	
+	theexalted = {
+		name = Exalted
+		plural = Exalted
+		home_planet = "Empathy"
+		home_system = "Empathy"
+		name_list = "EXT1"
+	}
+	
+	thejoyous = {
+		name = Joyous
+		plural = Joyous
+		home_planet = "Dexterity"
+		home_system = "Dexterity"
+		name_list = "EXT1"
+	}
+	
+	theserene = {
+		name = Serene
+		plural = Serene
+		home_planet = "Rectitude"
+		home_system = "Rectitude"
+		name_list = "EXT1"
+	}
+}

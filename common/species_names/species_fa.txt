@@ -1,0 +1,13 @@
+# Generated species derive their names from here
+
+### AI
+
+FAL = {
+	alvaxian = {
+		name = Alvaxian
+		plural = Alvaxians
+		home_planet = "Gelexin"
+		home_system = "Morthios"
+		name_list = "FAL1"
+	}
+}

@@ -1,0 +1,267 @@
+namespace = HEEGM
+
+country_event = {
+	id = HEEGM.2
+	hide_window = yes
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 1
+	}	
+	
+	immediate = {
+			create_species = {
+				name = "Zaath"
+				class = ART
+				portrait = art17
+				traits = { trait_zaath trait_psionic }
+				immortal = yes
+			}
+			last_created_species = { save_global_event_target_as = Zaathspecies }
+			every_country = {
+			limit = {
+				AND = {
+					has_civic = civic_ancient
+					has_civic = civic_GM
+				}
+			}
+			set_country_type = TheAncients
+			change_government = {
+				authority = auth_ancient
+			}
+			country_event = { id = HEEGM.3 }
+			}
+		}
+	}
+
+#Initialize Nomadic FE Sequence
+country_event = {
+	id = HEEGM.3
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		random_rim_system = {
+			limit = {
+				NOT = { exists = space_owner }
+				NOT = { has_star_flag = hostile_system }
+			}
+			random_system_planet = {
+				limit = {
+					is_star = yes
+				}
+			save_event_target_as = spawnpoint
+			}
+			every_system_planet = {
+				limit = {
+					or = {
+						is_planet_class = pc_barren 
+						colonizeable_planet = yes
+					}
+				}
+				change_pc = pc_shrouded
+			}
+		}
+		if = {
+			limit = {
+				has_ethic = ethic_fanatic_xenophobe
+			}
+						every_owned_leader = {
+							kill_leader = { show_notification = no }
+						}
+			change_dominant_species = { species = event_target:Zaathspecies change_all = yes }
+		add_modifier = { modifier = Zaathstarterbuffs days = 3600 }
+		add_modifier = { modifier = Zaath days = -1 }
+		set_graphical_culture = extra_dimensional_03
+		set_name = "The Iron Ancients"
+		save_global_event_target_as = AncientA
+		set_country_flag = xenoancient
+			every_owned_planet = {
+				change_pc = "pc_barren"
+				set_planet_flag = AncientMarkedA
+				destroy_colony = yes
+			}
+			every_owned_fleet = {
+				destroy_fleet = this
+			}
+		create_fleet = {
+			name = "Mother"
+			effect = {
+				set_fleet_flag = AncientFlagship
+				set_owner = event_target:AncientA
+				create_ship = {
+					name = "Mother"
+					design = "Ancient Flagship"
+					graphical_culture = "extra_dimensional_03"
+					upgradable = no
+				}
+				assign_leader = event_target:newruler
+				set_location = event_target:spawnpoint
+					}
+				settings = { 
+					can_upgrade = no 
+					can_disband = no
+					can_change_composition = no 
+					can_change_leader = no 
+					uses_naval_capacity = no
+					}
+				}				
+			}
+		else_if = {
+			limit = {
+				has_ethic = ethic_fanatic_militarist
+			}
+						every_owned_leader = {
+							kill_leader = { show_notification = no }
+						}
+		set_graphical_culture = extra_dimensional_02
+		set_name = "The Destructive Ancients"
+		save_global_event_target_as = AncientB
+		add_modifier = { modifier = Zaathstarterbuffs days = 3600 }
+		add_modifier = { modifier = Zaath days = -1 }
+		set_country_flag = authancient
+			every_owned_planet = {
+				change_pc = "pc_barren"
+				set_planet_flag = AncientMarkedB
+				save_event_target_as = AncientMarkedB
+				destroy_colony = yes
+			}
+			every_owned_fleet = {
+				destroy_fleet = this
+			}
+		create_fleet = {
+			name = "Pain"
+			effect = {
+				set_fleet_flag = AncientFlagship
+				set_owner = event_target:AncientB
+				create_ship = {
+					name = "Pain"
+					design = "Ancient Flagship"
+					graphical_culture = "extra_dimensional_02"
+					upgradable = no
+				}
+				assign_leader = event_target:newruler
+				set_location = event_target:spawnpoint
+					}
+				settings = { 
+					can_upgrade = no 
+					can_disband = no
+					can_change_composition = no 
+					can_change_leader = no 
+					uses_naval_capacity = no
+				}
+				}
+			}
+		else = {
+						every_owned_leader = {
+							kill_leader = { show_notification = no }
+						}
+		set_graphical_culture = extra_dimensional_01
+		set_name = "The Benevolent Ancients"
+		set_country_flag = egalancient
+		add_modifier = { modifier = Zaathstarterbuffs days = 3600 }
+		add_modifier = { modifier = Zaath days = -1 }
+		save_global_event_target_as = AncientC
+			every_owned_planet = {
+				change_pc = "pc_barren"
+				set_planet_flag = AncientMarkedC
+				save_event_target_as = AncientMarkedC
+				destroy_colony = yes
+			}
+			every_owned_fleet = {
+				destroy_fleet = this
+			}
+		create_fleet = {
+			name = "Intolerance"
+			effect = {
+				set_fleet_flag = AncientFlagship
+				set_owner = event_target:AncientC
+				create_ship = {
+					name = "Intolerance"
+					design = "Ancient Flagship"
+					graphical_culture = extra_dimensional_01
+					upgradable = no
+				}
+				assign_leader = event_target:ruler
+				set_location = event_target:spawnpoint
+						}
+				settings = { 
+					can_upgrade = no 
+					can_disband = no
+					can_change_composition = no 
+					can_change_leader = no 
+					uses_naval_capacity = no
+						}
+					}		
+				}
+			}
+		}
+		
+country_event = {#Reformed Zaath
+	id = HEEGM.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		save_event_target_as = target0
+		every_country = {
+			country_event = { id = HEEGM.5 }
+		}
+	}
+	
+}
+
+country_event = {#Reformation Announcement
+	id = HEEGM.5
+	title = HEEGM.5.title
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	desc = {#Xenophobe
+		text = "HEEGM.5.desca"
+		trigger = {
+			event_target:target0 = { has_ethic = ethic_fanatic_xenophobe }
+		}
+	}
+	desc = {#Xenophile
+		text = "HEEGM.5.descb"
+		trigger = {
+			event_target:target0 = { has_ethic = ethic_fanatic_xenophile }
+		}		
+	}
+	desc = {#Militarist
+		text = "HEEGM.5.descc"
+		trigger = {
+			event_target:target0 = { has_ethic = ethic_fanatic_militarist }
+		}
+	}
+	
+	option = {
+		name = "Ominous..."
+	}
+}
+		
+country_event = {#Warmonger Request (TO BE FINISHED)
+	id = HEEGM.1000
+	title = HEEGM.1000.title
+	desc = HEEGM.1000.desc
+	is_triggered_only = yes
+	
+	trigger = {
+		every_country = {
+			has_casus_belli = {
+				target = event_target:warmonger type = cb_warmonger
+			}
+		}
+	}
+	
+	option = {
+		name = "Accept"
+		join_war = from
+	}
+	
+	option = {
+		name = "Deny"
+	}
+}

@@ -1,0 +1,13 @@
+# Generated species derive their names from here
+
+### AI
+
+PIR = {
+	scurvians = {
+		name = Scurvian
+		plural = Scurvians
+		home_planet = "New Tortuga"
+		home_system = "Barataria"
+		name_list = "PIR1"
+	}
+}

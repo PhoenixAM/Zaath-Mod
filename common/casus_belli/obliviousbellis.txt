@@ -1,0 +1,15 @@
+cb_warmonger = {
+	show_notification = yes
+	show_in_diplomacy = yes
+	potential = {
+		is_country_type = default
+	{
+	is_valid = {
+		OR = {
+		from = { has_country_flag = WARMON }	
+		root = {
+			has_opinion_modifier = { who = from modifier = opinion_threat > 40 }
+			}
+		}
+	}
+}

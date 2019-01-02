@@ -1,0 +1,13 @@
+# Generated species derive their names from here
+
+### AI
+
+ANC = {
+	ancients = {
+		name = Ancient
+		plural = Ancients
+		home_planet = "Elvexia"
+		home_system = "Kelegia"
+		name_list = "ANC1"
+	}
+}

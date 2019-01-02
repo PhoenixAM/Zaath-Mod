@@ -1,0 +1,16 @@
+civic_ancient = {
+modification = no
+	random_weight = {
+		base = 0
+	}
+}
+
+civic_GM = {
+modification = no
+	random_weight = {
+		base = 0
+	}
+}
+
+#####################################
+#ZAAAAAAAAATH

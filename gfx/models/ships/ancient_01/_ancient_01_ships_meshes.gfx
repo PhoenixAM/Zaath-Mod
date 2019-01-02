@@ -1,0 +1,23 @@
+objectTypes = {
+
+		pdxmesh = {
+			name = "ancient_01_bomber_mesh"
+			file = "gfx/models/ships/ancient_01/ancient_01_bomber.mesh"
+    
+			scale = 1.0
+		}
+		pdxmesh = {
+			name = "ancient_01_fighter_mesh"
+			file = "gfx/models/ships/ancient_01/ancient_01_fighter.mesh"
+    
+			scale = 1.0
+		}
+		pdxmesh = {
+			name = "ancient_01_droppod_mesh"
+			file = "gfx/models/ships/ancient_01/ancient_01_droppod.mesh"
+    
+			scale = 1.0
+		}
+}
+
+	
